@@ -47,9 +47,12 @@
 
     .fitur-box {
       border-radius: 15px;
-      padding: 1rem;
-      min-height: 145px;
+      padding: 1.25rem;
+      min-height: 160px;
       transition: transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .fitur-box:hover {
@@ -134,12 +137,11 @@
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header class="d-flex p-2">
     <img src="{{ url('img/logo.png') }}" alt="icon" width="7.5%" />
   </header>
 
-  <!-- Profile Section -->
   <div class="container-fluid">
     <div class="profile-header text-white d-flex align-items-center gap-4">
       <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Image" class="profile-img" />
@@ -151,61 +153,58 @@
       </div>
     </div>
   </div>
+  
 
-  <!-- Fitur Utama -->
-  <div id="fitur">
-    <h5 class="mb-4 text-primary">Fitur Utama :</h5>
+  <div class="container my-5">
+    <div id="fitur">
+      <h5 class="mb-4 text-primary">Fitur Utama :</h5>
 
-    <!-- Baris 1 -->
-    <div class="row g-4 mb-2">
-      <div class="col-md-4">
-        <a href="{{ route('sertifikasi') }}" class="card-role">
-          <div class="fitur-box sertifikasi h-100">
-            <div class="fitur-title">Sertifikasi</div>
-            <p>Meningkatkan anda mencantumkan yang anda butuhkan</p>
-          </div>
-        </a>
+      <div class="row gx-4 gy-4 mb-4">
+        <div class="col-md-4">
+          <a href="{{ route('sertifikasi') }}" class="card-role">
+            <div class="fitur-box sertifikasi h-100">
+              <div class="fitur-title">Sertifikasi</div>
+              <p>Meningkatkan anda mencantumkan yang anda butuhkan</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="{{ route('loker') }}" class="card-role">
+            <div class="fitur-box loker h-100">
+              <div class="fitur-title">Loker</div>
+              <p>Temukan pekerjaan yang anda impikan</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="{{ route('pelatihan') }}" class="card-role">
+            <div class="fitur-box pelatihan h-100">
+              <div class="fitur-title">Pelatihan</div>
+              <p>Ikuti pelatihan untuk meningkatkan skill anda</p>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="col-md-4">
-        <a href="{{ route('loker') }}" class="card-role">
-          <div class="fitur-box loker h-100">
-            <div class="fitur-title">Loker</div>
-            <p>Temukan pekerjaan yang anda impikan</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4">
-        <a href="{{ route('pelatihan') }}" class="card-role">
-          <div class="fitur-box pelatihan h-100">
-            <div class="fitur-title">Pelatihan</div>
-            <p>Ikuti pelatihan untuk meningkatkan skill anda</p>
-          </div>
-        </a>
-      </div>
-    </div>
 
-    <!-- Baris 2 -->
-    <div class="row g-4">
-      <div class="col-md-6">
-        <a href="{{ route('ikalumni') }}" class="card-role">
-          <div class="fitur-box alumni h-100">
-            <div class="fitur-title">Ikatan Alumni</div>
-            <p>Temukan alumni yang berasal dari sekolah anda</p>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a href="{{ route('kuliah') }}" class="card-role">
-          <div class="fitur-box magang h-100">
-            <div class="fitur-title">Kuliah</div>
-            <p>Informasi mengenai universitas di seluruh Indonesia</p>
-          </div>
-        </a>
+      <div class="row gx-4 gy-4">
+        <div class="col-md-6">
+          <a href="{{ route('ikalumni') }}" class="card-role">
+            <div class="fitur-box alumni h-100">
+              <div class="fitur-title">Ikatan Alumni</div>
+              <p>Temukan alumni yang berasal dari sekolah anda</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <a href="{{ route('kuliah') }}" class="card-role">
+            <div class="fitur-box magang h-100">
+              <div class="fitur-title">Kuliah</div>
+              <p>Informasi mengenai universitas di seluruh Indonesia</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

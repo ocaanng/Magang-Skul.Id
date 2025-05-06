@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skul.Id</title>
-
-  <!-- Fonts & Bootstrap -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
@@ -103,30 +101,30 @@
     }
 
     .btn-outline-primary {
-  color: #fff;
-  background-color: #0d6efd;
-  border-color: #0d6efd;
-  transition: all 0.3s ease;
-}
+      color: #fff;
+      background-color: #0d6efd;
+      border-color: #0d6efd;
+      transition: all 0.3s ease;
+    }
 
-.btn-outline-primary:hover {
-  color: #0d6efd;
-  background-color: #fff;
-  border-color: #0d6efd;
-}
+    .btn-outline-primary:hover {
+      color: #0d6efd;
+      background-color: #fff;
+      border-color: #0d6efd;
+    }
 
   </style>
 
-@php
-$filteredJobs = [
-  ['title' => 'Web Developer', 'location' => 'Indonesia', 'type' => 'Full Time', 'mode' => 'Remote', 'company' => 'Tech Innovators'],
-  ['title' => 'Data Analyst', 'location' => 'USA', 'type' => 'Part Time', 'mode' => 'Onsite', 'company' => 'Data Corp'],
-  ['title' => 'UI/UX Designer', 'location' => 'Germany', 'type' => 'Project', 'mode' => 'Remote', 'company' => 'Design Studio'],
-  ['title' => 'Backend Engineer', 'location' => 'Indonesia', 'type' => 'Project', 'mode' => 'Onsite', 'company' => 'Code Masters'],
-  ['title' => 'Mobile App Developer', 'location' => 'Singapore', 'type' => 'Full Time', 'mode' => 'Remote', 'company' => 'App Solutions'],
-  ['title' => 'DevOps Engineer', 'location' => 'Netherlands', 'type' => 'Full Time', 'mode' => 'Onsite', 'company' => 'DevOps Experts']
-];
-@endphp
+  @php
+  $filteredJobs = [
+    ['title' => 'Web Developer', 'location' => 'Indonesia', 'type' => 'Full Time', 'mode' => 'Remote', 'company' => 'Tech Innovators'],
+    ['title' => 'Data Analyst', 'location' => 'USA', 'type' => 'Part Time', 'mode' => 'Onsite', 'company' => 'Data Corp'],
+    ['title' => 'UI/UX Designer', 'location' => 'Germany', 'type' => 'Project', 'mode' => 'Remote', 'company' => 'Design Studio'],
+    ['title' => 'Backend Engineer', 'location' => 'Indonesia', 'type' => 'Project', 'mode' => 'Onsite', 'company' => 'Code Masters'],
+    ['title' => 'Mobile App Developer', 'location' => 'Singapore', 'type' => 'Full Time', 'mode' => 'Remote', 'company' => 'App Solutions'],
+    ['title' => 'DevOps Engineer', 'location' => 'Netherlands', 'type' => 'Full Time', 'mode' => 'Onsite', 'company' => 'DevOps Experts']
+  ];
+  @endphp
 
 </head>
 <body>
@@ -165,7 +163,6 @@ $filteredJobs = [
         </div>
       </div>
 
-      <!-- Job List -->
       <div class="col-md-8">
         <div class="row">
           @forelse($filteredJobs as $job)

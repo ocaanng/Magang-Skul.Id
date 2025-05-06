@@ -91,12 +91,10 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header class="d-flex p-2">
     <img src="{{ url('img/logo.png') }}" alt="icon" width="7.5%" />
   </header>
 
-  <!-- Profile -->
   <div class="container-fluid">
     <div class="profile-header text-white d-flex align-items-center gap-4">
       <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile Image" class="profile-img" />
@@ -109,10 +107,9 @@
     </div>
   </div>
 
-  <!-- Main Content -->
   <div class="main-content">
     <div class="row">
-      <!-- Left Content -->
+
       <div class="col-lg-9">
         <input type="text" class="form-control search-bar" placeholder="Cari jurusan" />
 
@@ -156,7 +153,6 @@
         </div>
       </div>
 
-      <!-- Right Section -->
       <div class="col-lg-3 mt-4 mt-lg-0">
         <div class="right-section">
           <h6>Sertifikasi Terbaru</h6>
