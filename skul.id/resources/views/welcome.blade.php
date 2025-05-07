@@ -109,7 +109,7 @@
 
         <div class="konten">
 
-            <a href="{{ route('login') }}" class="card-role mitra text-decoration-none">
+            <a href="{{ route('loginmitra') }}" class="card-role mitra text-decoration-none">
                 <div>
                     <h1>Mitra</h1>
                     <p>Bergabung menjadi mitra sebagai penyedia sertifikasi, pelatihan dan informasi lowongan kerja</p>
@@ -117,7 +117,7 @@
                 <img src="{{ url('img/.png') }}" alt="Mitra">
             </a>
 
-            <a href="{{ route('login') }}" class="card-role alumni text-decoration-none">
+            <a href="{{ route('loginalumni') }}" class="card-role alumni text-decoration-none">
                 <div>
                     <h1>Alumni</h1>
                     <p>Jika kamu sudah lulus program pendidikan SMA/SMK/MA</p>

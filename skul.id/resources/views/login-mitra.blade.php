@@ -106,8 +106,8 @@
     
     <div class="login-container">
         <div class="text">
-            <h1>Login Alumni</h1>
-            <p>Belum memiliki akun? <a href="{{ url('/register') }}" class="text-danger">Daftar Sekarang</a></p>
+            <h1>Login Mitra</h1>
+            <p>Belum memiliki akun? <a href="{{ route('registermitra') }}" class="text-danger">Daftar Sekarang</a></p>
         </div>
 
         @csrf
@@ -129,12 +129,12 @@
                     <a href="#">Ketentuan Pengguna</a> & <a href="#">Kebijakan Privasi</a>
                 </label>
             </div>
-            <a href="{{ route('alumni') }}" class="card-role mitra text-decoration-none">
+            <a href="{{ route('mitra') }}" class="card-role mitra text-decoration-none">
                 <button type="submit" class="btn login-btn w-100">LOGIN</button>
             </a>
         </div>
         
-        <form action="{{ route('login') }}" method="POST">
+        <form action="{{ route('loginmitra') }}" method="POST">
     </form>
 </body>
 </html>

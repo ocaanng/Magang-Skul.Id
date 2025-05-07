@@ -18,7 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', [PagesController::class, 'login'])->name('login');
+Route::get('/alumni/login', [PagesController::class, 'login_alumni'])->name('loginalumni');
+Route::get('/alumni/register', [PagesController::class, 'register_alumni'])->name('registeralumni');
 Route::get('/alumni', [PagesController::class, 'alumni'])->name('alumni');
 Route::get('/alumni/sertifikasi', [PagesController::class, 'sertifikasi'])->name('sertifikasi');
 Route::get('/alumni/loker', [PagesController::class, 'loker'])->name('loker');
@@ -26,21 +27,6 @@ Route::get('/alumni/pelatihan', [PagesController::class, 'pelatihan'])->name('pe
 Route::get('/alumni/ikatan alumni', [PagesController::class, 'ikatanalumni'])->name('ikalumni');
 Route::get('/alumni/kuliah', [PagesController::class, 'kuliah'])->name('kuliah');
 
-Route::get('/jobs', function (Request $request) {
-    $jobs = collect([
-        ['title' => 'Frontend Developer', 'location' => 'Indonesia', 'type' => 'Full Time', 'mode' => 'Remote'],
-        ['title' => 'UI/UX Designer', 'location' => 'USA', 'type' => 'Part Time', 'mode' => 'Onsite'],
-        ['title' => 'Mobile App Developer', 'location' => 'Germany', 'type' => 'Project', 'mode' => 'Remote'],
-        ['title' => 'Backend Engineer', 'location' => 'Indonesia', 'type' => 'Full Time', 'mode' => 'Onsite'],
-    ]);
-
-    $filtered = $jobs->filter(function ($job) use ($request) {
-        return (!$request->location || $job['location'] === $request->location) &&
-               (!$request->type || $job['type'] === $request->type);
-    });
-
-    return view('jobs', [
-        'jobs' => $filtered,
-        'filters' => $request->only(['location', 'type']),
-    ]);
-});
+Route::get('/mitra/login', [PagesController::class, 'login_mitra'])->name('loginmitra');
+Route::get('/mitra/register', [PagesController::class, 'register_mitra'])->name('registermitra');
+Route::get('/mitra', [PagesController::class, 'alumni'])->name('mitra');

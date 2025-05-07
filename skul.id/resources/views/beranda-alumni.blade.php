@@ -70,7 +70,6 @@
       font-weight: 400;
     }
 
-    /* Background & Text Colors */
     .sertifikasi {
       background-color: #DAF2FF;
     }
