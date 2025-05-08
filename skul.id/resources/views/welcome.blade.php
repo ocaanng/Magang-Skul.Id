@@ -12,95 +12,152 @@
             font-family: "Poppins", sans-serif;
             color: #252f35;
             font-size: 13px;
-            height: 100%;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
         }
 
-        .body-utama {
-            margin: 4px;
-            flex-direction: column;
+        header {
+            display: flex;
+            align-items: center;
+            padding: 15px 0 20px 30px;
+        }
+
+        header img {
+            width: 120px;
+        }
+
+        .hero-section {
+            background: linear-gradient(to bottom, #CDE8FC, #EEF6FE);
+            border-radius: 0 0 20px 20px;
+            height: auto;
+            padding: 0;
         }
 
         .judul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+            margin: 60px 0 30px;
         }
 
         .judul h1 {
-            font-size: 27px;
-            font-weight: bold;
-            margin-bottom: 12px;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
 
         .judul p {
-            font-weight: 300;
             font-size: 18px;
-            margin-bottom: 18px;
+            font-weight: 300;
+            margin: 0;
         }
 
         .konten {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 40px;
-            margin-top: 20px;
+            gap: 30px;
+            padding-bottom: 60px;
         }
 
         .card-role {
-            width: 30%;
-            border-radius: 15px;
-            padding: 20px;
             display: flex;
-            flex-direction: column;
+            align-items: center;
             justify-content: space-between;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px 25px;
+            border-radius: 18px;
             text-decoration: none;
-            transition: all 0.2s ease-in-out;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
         }
 
         .card-role:hover {
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-            transform: translateY(-2px);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
-        .mitra {
-            background-color: #B1FFA0;
-            color: #368C23;
+        .card-role .text {
+            max-width: 70%;
         }
 
-        .mitra h1 {
+        .card-role h2 {
             font-size: 20px;
             font-weight: 700;
-            color: #459433;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
-        .alumni {
-            background-color: #B2EEFF;
-            color: #1199BD;
-        }
-
-        .alumni h1 {
-            font-size: 20px;
-            font-weight: 700;
-            color: #149EC3;
-            margin-bottom: 10px;
+        .card-role p {
+            font-size: 14px;
+            font-weight: 300;
+            margin: 0;
         }
 
         .card-role img {
-            width: 60%;
-            align-self: flex-end;
-            margin-top: auto;
+            width: 70px;
+            height: auto;
+        }
+
+        .mitra {
+            background-color: #D9FBE2;
+            color: #256d3d;
+        }
+
+        .alumni {
+            background-color: #D4F0FF;
+            color: #0d6efd;
         }
 
         a.text-decoration-none:hover {
             color: inherit;
         }
+
+        @media (max-width: 768px) {
+            .card-role {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .card-role .text {
+                max-width: 100%;
+            }
+
+            .card-role img {
+                margin-top: 10px;
+            }
+        }
+
+        .footer {
+            background-color:#F2F9FF;
+        }
     </style>
 </head>
 <body>
     <div class="body-utama">
-        <header class="d-flex p-2">
-            <img src="{{ url('img/logo.png') }}" alt="icon" width="7.5%">
+        <header>
+            <img src="{{ url('img/logo.png') }}" alt="Logo Skul.Id">
         </header>
+
+        <div class="hero-section d-flex align-items-stretch p-0">
+            <div class="container-fluid d-flex align-items-stretch p-0">
+                <div class="col-lg-1"></div>
+                <div class="row w-100 m-0 align-items-stretch">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center text-lg-start text-center py-5 px-4 ml-5">
+                        <div>
+                            <h1 class="fw-bold text-danger mb-3 ">Selamat Datang di <span class="text-primary">Skul.Id</span></h1>
+                            <p class="fs-5 text-secondary">
+                                Tempat terhubungnya alumni, sekolah, dunia kerja, dan peluang karier secara langsung dan terpercaya.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-end justify-content-center p-0">
+                        <img src="{{ url('img/landing-logo.png') }}" alt="Ikon Utama" style="width: 250px; margin-bottom: 0;">
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="judul">
             <h1>Ayo Mulai</h1>
@@ -108,24 +165,51 @@
         </div>
 
         <div class="konten">
-
             <a href="{{ route('loginmitra') }}" class="card-role mitra text-decoration-none">
-                <div>
-                    <h1>Mitra</h1>
-                    <p>Bergabung menjadi mitra sebagai penyedia sertifikasi, pelatihan dan informasi lowongan kerja</p>
+                <div class="text">
+                    <h2 style="color: #256d3d;">Mitra</h2>
+                    <p style="color: #256d3d;">Bergabung menjadi mitra sebagai penyedia sertifikasi, pelatihan dan informasi lowongan kerja</p>
                 </div>
-                <img src="{{ url('img/.png') }}" alt="Mitra">
+                <img src="{{ url('img/mitra.png') }}" alt="Icon Mitra">
             </a>
 
             <a href="{{ route('loginalumni') }}" class="card-role alumni text-decoration-none">
-                <div>
-                    <h1>Alumni</h1>
-                    <p>Jika kamu sudah lulus program pendidikan SMA/SMK/MA</p>
+                <div class="text">
+                    <h2 style="color: #437F9F">Alumni</h2>
+                    <p style="color: #377EA5">Jika kamu sudah lulus program pendidikan SMA/SMK/MA</p>
                 </div>
-                <img src="{{ url('img/.png') }}" alt="Alumni">
+                <img src="https://img.icons8.com/color/96/student-male--v1.png" alt="Icon Alumni">
             </a>
-
         </div>
     </div>
+ <!-- Footer -->
+<footer class="footer mt-5 pt-4 border-top">
+  <div class="container py-3">
+    <div class="row justify-content-between align-items-start">
+      <!-- Tentang Skul.Id -->
+      <div class="col-md-6 mb-3">
+        <h5 class="text-primary fw-bold">Skul.Id</h5>
+        <p class="text-muted mb-0" style="max-width: 100%;">
+          Skul.Id adalah platform yang menghubungkan alumni dengan sekolah, dunia industri, dan peluang karier. Kami percaya koneksi yang kuat akan membuka masa depan yang lebih baik.
+        </p>
+      </div>
+
+      <!-- Kontak -->
+<!-- Kontak -->
+<div class="col-md-3 ms-auto text-start mb-3">
+  <h6 class="fw-bold">Kontak</h6>
+  <p class="mb-0">Email: info@skul.id</p>
+  <p class="mb-0">Telp/WA: +62 852-2584-5253</p>
+</div>
+
+
+
+    <!-- Watermark -->
+    <div class="text-center text-muted small mt-4">
+      © 2025 Skul.Id. All rights reserved.
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

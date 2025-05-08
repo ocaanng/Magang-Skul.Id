@@ -29,4 +29,7 @@ Route::get('/alumni/kuliah', [PagesController::class, 'kuliah'])->name('kuliah')
 
 Route::get('/mitra/login', [PagesController::class, 'login_mitra'])->name('loginmitra');
 Route::get('/mitra/register', [PagesController::class, 'register_mitra'])->name('registermitra');
-Route::get('/mitra', [PagesController::class, 'alumni'])->name('mitra');
+Route::get('/mitra', [PagesController::class, 'mitra'])->name('mitra');
+Route::get('/mitra/sertifikasi', [PagesController::class, 'sertifikasi_mitra'])->name('sertifikasi_mitra');
+Route::get('/mitra/loker', [PagesController::class, 'loker_mitra'])->name('loker_mitra');
+Route::get('/mitra/pelatihan', [PagesController::class, 'pelatihan_mitra'])->name('pelatihan_mitra');

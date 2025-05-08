@@ -60,4 +60,19 @@ class PagesController extends Controller
         {
             return view('register-mitra');
         }
+
+    public function sertifikasi_mitra()
+        {
+            return view('sertifikasi-mitra');
+        }
+
+    public function loker_mitra()
+        {
+            return view('loker-mitra');
+        }
+
+    public function pelatihan_mitra()
+        {
+            return view('pelatihan-mitra');
+        }
 }

@@ -146,7 +146,6 @@
 
   <div class="container my-5">
     <div class="row">
-      <!-- Filter -->
       <div class="col-md-4 mb-4">
         <div class="filter-box">
           <form method="GET">

@@ -51,12 +51,16 @@
       min-height: 160px;
       transition: transform 0.2s ease;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .fitur-box:hover {
       transform: scale(1.03);
+    }
+
+    .fitur-content {
+      flex: 1;
     }
 
     .fitur-title {
@@ -68,6 +72,12 @@
     .fitur-box p {
       font-size: 0.95rem;
       font-weight: 400;
+    }
+
+    .fitur-icon {
+      width: 60px;
+      height: 60px;
+      margin-left: 1rem;
     }
 
     .sertifikasi {
@@ -152,7 +162,6 @@
       </div>
     </div>
   </div>
-  
 
   <div class="container my-5">
     <div id="fitur">
@@ -162,24 +171,33 @@
         <div class="col-md-4">
           <a href="{{ route('sertifikasi') }}" class="card-role">
             <div class="fitur-box sertifikasi h-100">
-              <div class="fitur-title">Sertifikasi</div>
-              <p>Meningkatkan anda mencantumkan yang anda butuhkan</p>
+              <div class="fitur-content">
+                <div class="fitur-title">Sertifikasi</div>
+                <p>Perkuat kredensialmu dengan sertifikasi profesional.</p>
+              </div>
+              <img src="https://img.icons8.com/color/96/diploma.png" alt="icon sertifikasi" class="fitur-icon" />
             </div>
           </a>
         </div>
         <div class="col-md-4">
           <a href="{{ route('loker') }}" class="card-role">
             <div class="fitur-box loker h-100">
-              <div class="fitur-title">Loker</div>
-              <p>Temukan pekerjaan yang anda impikan</p>
+              <div class="fitur-content">
+                <div class="fitur-title">Loker</div>
+                <p>Temukan pekerjaan yang sesuai dengan minat dan keahlianmu.</p>
+              </div>
+              <img src="https://img.icons8.com/color/96/find-user-male.png" alt="icon loker" class="fitur-icon" />
             </div>
           </a>
         </div>
         <div class="col-md-4">
           <a href="{{ route('pelatihan') }}" class="card-role">
             <div class="fitur-box pelatihan h-100">
-              <div class="fitur-title">Pelatihan</div>
-              <p>Ikuti pelatihan untuk meningkatkan skill anda</p>
+              <div class="fitur-content">
+                <div class="fitur-title">Pelatihan</div>
+                <p>Ikuti pelatihan untuk meningkatkan kompetensimu.</p>
+              </div>
+              <img src="https://img.icons8.com/color/96/classroom.png" alt="icon pelatihan" class="fitur-icon" />
             </div>
           </a>
         </div>
@@ -189,21 +207,28 @@
         <div class="col-md-6">
           <a href="{{ route('ikalumni') }}" class="card-role">
             <div class="fitur-box alumni h-100">
-              <div class="fitur-title">Ikatan Alumni</div>
-              <p>Temukan alumni yang berasal dari sekolah anda</p>
+              <div class="fitur-content">
+                <div class="fitur-title">Ikatan Alumni</div>
+                <p>Bangun koneksi dengan sesama alumni dari sekolahmu.</p>
+              </div>
+              <img src="https://img.icons8.com/color/96/conference-call.png" alt="icon alumni" class="fitur-icon" />
             </div>
           </a>
         </div>
         <div class="col-md-6">
           <a href="{{ route('kuliah') }}" class="card-role">
             <div class="fitur-box magang h-100">
-              <div class="fitur-title">Kuliah</div>
-              <p>Informasi mengenai universitas di seluruh Indonesia</p>
+              <div class="fitur-content">
+                <div class="fitur-title">Kuliah</div>
+                <p>Informasi dan panduan kuliah di berbagai universitas Indonesia.</p>
+              </div>
+              <img src="https://img.icons8.com/color/96/graduation-cap.png" alt="icon kuliah" class="fitur-icon" />
             </div>
           </a>
         </div>
       </div>
     </div>
   </div>
+
 </body>
 </html>
