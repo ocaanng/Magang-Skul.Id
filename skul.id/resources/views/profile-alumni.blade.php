@@ -34,7 +34,7 @@
     }
 
     .navbar .logo {
-      width: 120px;
+      width: 100px;
     }
 
     .user-info {
@@ -242,7 +242,7 @@
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" width=""/>
+    <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" />
     <div class="user-info">
       <span>Halo User</span>
       <img src="{{ url('img/profile.jpg') }}" alt="Profile" class="profile-picture" />
@@ -257,83 +257,71 @@
       <a class="text-secondary" href="#">Sertifikasi</a>
       <a class="text-secondary" href="#">Loker</a>
       <a class="text-secondary" href="#">Pelatihan</a>
-      <a class="text-secondary" href="{{ route('profile_alumni') }}">Profil</a>
-
+      <a class="text-secondary" href="#">Profil</a>
       <a href="#" class="logout">Logout</a>
     </div>
 
-    <!-- Content -->
     <div class="content">
-      <div class="banner">
-        <div class="col-lg-7 d-flex flex-column justify-content-center text-lg-start text-center py-5 px-4 ml-5">
-        <h2 class="fw-bold">Bangun Masa Depanmu Bersama Skul.Id</h2>
-        <p class="text-secondary">Temukan peluang terbaik seperti pelatihan, sertifikasi, dan informasi kampus untuk membantumu meraih cita-cita karier.</p>
+  <div class="container py-5 px-4">
+    <div class="card rounded-4 p-4" style="background-color: #ffffff;">
+      <h3 class="mb-4 fw-bold text-primary text-center">Profil Siswa</h3>
+      <div class="row">
+        <div class="col-md-4 text-center mb-4">
+          <img src="{{ url('img/user.png') }}" alt="Foto Profil" class="rounded-circle border border-3" style="width: 150px; height: 150px; object-fit: cover;">
+          <p class="mt-3 fw-semibold text-secondary">Siswa Aktif</p>
         </div>
-        <img src="{{ url('img/main-dashboard.png') }}" alt="Ilustrasi" class="illustration" />
-      </div>
+        <div class="col-md-8">
+          <table class="table table-borderless">
+            <tr>
+              <th class="text-secondary w-50">Nama Lengkap</th>
+              <td><strong>Rizky Saputra</strong></td>
+            </tr>
+            <tr>
+              <th class="text-secondary">NISN</th>
+              <td>1234567890</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Kelas</th>
+              <td>XII IPA 1</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Jurusan</th>
+              <td>Teknik Komputer dan Jaringan</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Asal Sekolah</th>
+              <td>SMK Negeri 1 Bandung</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Email</th>
+              <td>rizky@example.com</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">No. Telepon</th>
+              <td>081234567890</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Jenis Kelamin</th>
+              <td>Laki-laki</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Tanggal Lahir</th>
+              <td>12 Mei 2007</td>
+            </tr>
+            <tr>
+              <th class="text-secondary">Alamat</th>
+              <td>Jl. Merdeka No. 10, Bandung</td>
+            </tr>
+          </table>
 
-      <div class="container-fluid my-5">
-        <div id="fitur">
-          <h5 class="mb-4 fw-semibold">Fitur Utama :</h5>
-          <div class="row gx-4 gy-4 mb-4">
-            <div class="col-md-4">
-              <a href="{{ route('sertifikasi') }}">
-                <div class="feature-card sertifikasi h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Sertifikasi</div>
-                    <p>Perkuat kredensialmu dengan sertifikasi profesional.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="{{ route('loker') }}">
-                <div class="feature-card loker h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Loker</div>
-                    <p>Temukan pekerjaan yang sesuai dengan minat dan keahlianmu.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="{{ route('pelatihan') }}">
-                <div class="feature-card pelatihan h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Pelatihan</div>
-                    <p>Ikuti pelatihan untuk meningkatkan kompetensimu.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="row gx-4 gy-4">
-            <div class="col-md-6">
-              <a href="{{ route('ikalumni') }}">
-                <div class="feature-card alumni h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Ikatan Alumni</div>
-                    <p>Bangun koneksi dengan sesama alumni dari sekolahmu.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="{{ route('kuliah') }}">
-                <div class="feature-card magang h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Kuliah</div>
-                    <p>Informasi dan panduan kuliah di berbagai universitas Indonesia.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
+          <div class="text-end mt-4">
+            <a href="{{ route('edit_profile_alumni') }}" class="btn btn-outline-primary rounded-3 px-4 fw-semibold">Edit Profil</a>
           </div>
         </div>
       </div>
-
     </div>
   </div>
+</div>
 </body>
 </html>
+

@@ -36,6 +36,16 @@ class PagesController extends Controller
             return view('pelatihan-alumni');
         }
 
+    public function profile_alumni()
+        {
+            return view('profile-alumni');
+        }
+
+    public function edit_profile_alumni()
+        {
+            return view('edit-profile-alumni');
+        }
+
     public function ikatanalumni()
         {
             return view('ikatan-alumni');
@@ -74,5 +84,10 @@ class PagesController extends Controller
     public function pelatihan_mitra()
         {
             return view('pelatihan-mitra');
+        }
+    
+    public function login_siswa()
+        {
+            return view('login-siswa');
         }
 }

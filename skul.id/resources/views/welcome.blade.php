@@ -106,7 +106,12 @@
 
         .alumni {
             background-color: #D4F0FF;
-            color: #0d6efd;
+            color: #437F9F;
+        }
+
+        .siswa {
+            background-color: #ece8ff;
+            color: #5a4895;
         }
 
         a.text-decoration-none:hover {
@@ -164,23 +169,40 @@
             <p>Silahkan pilih role kamu:</p>
         </div>
 
-        <div class="konten">
-            <a href="{{ route('loginmitra') }}" class="card-role mitra text-decoration-none">
-                <div class="text">
-                    <h2 style="color: #256d3d;">Mitra</h2>
-                    <p style="color: #256d3d;">Bergabung menjadi mitra sebagai penyedia sertifikasi, pelatihan dan informasi lowongan kerja</p>
-                </div>
-                <img src="{{ url('img/mitra.png') }}" alt="Icon Mitra">
-            </a>
-
-            <a href="{{ route('loginalumni') }}" class="card-role alumni text-decoration-none">
-                <div class="text">
-                    <h2 style="color: #437F9F">Alumni</h2>
-                    <p style="color: #377EA5">Jika kamu sudah lulus program pendidikan SMA/SMK/MA</p>
-                </div>
-                <img src="https://img.icons8.com/color/96/student-male--v1.png" alt="Icon Alumni">
-            </a>
+    <!-- Role Cards -->
+    <div class="container pb-5">
+      <div class="row g-4 justify-content-center">
+        <!-- Mitra -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <a href="{{ route('loginmitra') }}" class="card-role mitra text-decoration-none w-100">
+            <div>
+              <h2>Mitra</h2>
+              <p>Bergabung menjadi mitra sebagai penyedia sertifikasi, pelatihan dan informasi lowongan kerja</p>
+            </div>
+          </a>
         </div>
+
+        <!-- Alumni -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <a href="{{ route('loginalumni') }}" class="card-role alumni text-decoration-none w-100">
+            <div>
+              <h2>Alumni</h2>
+              <p>Jika kamu sudah lulus program pendidikan SMA/SMK/MA</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Siswa -->
+        <div class="col-md-6 col-lg-4 d-flex">
+          <a href="{{ route('loginsiswa') }}" class="card-role siswa text-decoration-none w-100">
+            <div>
+              <h2>Siswa</h2>
+              <p>Jika kamu sedang menempuh pendidikan di SMA/SMK/MA dan ingin mulai menjelajahi peluang karier</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
     </div>
  <!-- Footer -->
 <footer class="footer mt-5 pt-4 border-top">

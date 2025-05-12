@@ -152,14 +152,14 @@
 
       <!-- Icon besar -->
       <div class="icon-besar">
-        <img src="{{ url('img/login-alumni.png') }}" alt="Icon Besar" style="width: 350px;">
+        <img src="{{ url('img/login-mitra.png') }}" alt="Icon Besar" style="width: 350px;">
       </div>
 
       <!-- Form Login -->
       <div class="login-form">
         <div class="text">
-          <h1>Login Alumni</h1>
-          <p>Belum memiliki akun? <a href="{{ route('registeralumni') }}" class="text-danger">Daftar Sekarang</a></p>
+          <h1>Login Mitra</h1>
+          <p>Belum memiliki akun? <a href="{{ route('registermitra') }}" class="text-danger">Daftar Sekarang</a></p>
         </div>
 
           @csrf

@@ -26,6 +26,9 @@ Route::get('/alumni/loker', [PagesController::class, 'loker'])->name('loker');
 Route::get('/alumni/pelatihan', [PagesController::class, 'pelatihan'])->name('pelatihan');
 Route::get('/alumni/ikatan alumni', [PagesController::class, 'ikatanalumni'])->name('ikalumni');
 Route::get('/alumni/kuliah', [PagesController::class, 'kuliah'])->name('kuliah');
+Route::get('/alumni/ikatan alumni', [PagesController::class, 'ikatanalumni'])->name('ikalumni');
+Route::get('/alumni/profile', [PagesController::class, 'profile_alumni'])->name('profile_alumni');
+Route::get('/alumni/profile/edit', [PagesController::class, 'edit_profile_alumni'])->name('edit_profile_alumni');
 
 Route::get('/mitra/login', [PagesController::class, 'login_mitra'])->name('loginmitra');
 Route::get('/mitra/register', [PagesController::class, 'register_mitra'])->name('registermitra');
@@ -33,3 +36,5 @@ Route::get('/mitra', [PagesController::class, 'mitra'])->name('mitra');
 Route::get('/mitra/sertifikasi', [PagesController::class, 'sertifikasi_mitra'])->name('sertifikasi_mitra');
 Route::get('/mitra/loker', [PagesController::class, 'loker_mitra'])->name('loker_mitra');
 Route::get('/mitra/pelatihan', [PagesController::class, 'pelatihan_mitra'])->name('pelatihan_mitra');
+
+Route::get('/siswa/login', [PagesController::class, 'login_siswa'])->name('loginsiswa');

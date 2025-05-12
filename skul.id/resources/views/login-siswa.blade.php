@@ -152,42 +152,39 @@
 
       <!-- Icon besar -->
       <div class="icon-besar">
-        <img src="{{ url('img/login-mitra.png') }}" alt="Icon Besar" style="width: 350px;">
+        <img src="{{ url('img/login-siswa.png') }}" alt="Icon Besar" style="width: 350px;">
       </div>
 
       <!-- Form Login -->
       <div class="login-form">
         <div class="text">
-          <h1>Daftar Mitra</h1>
-          <p>Belum memiliki akun? <a href="{{ route('registermitra') }}" class="text-danger">Daftar Sekarang</a></p>
+          <h1>Login Siswa</h1>
+          <p>Belum memiliki akun? <a href="{{ route('registeralumni') }}" class="text-danger">Daftar Sekarang</a></p>
         </div>
 
           @csrf
-          <form method="POST" action="#">
-        @csrf
-        <div class="mb-3 position-relative">
+          <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-person"></i></span>
-            <input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
-        </div>
-        <div class="mb-3 position-relative">
-            <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-            <input type="email" class="form-control" placeholder="Email" name="email" required>
-        </div>
-        <div class="mb-3 position-relative">
+            <input type="text" class="form-control" placeholder="Username" name="email" required>
+          </div>
+          <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-lock"></i></span>
             <input type="password" class="form-control" placeholder="Password" name="password" required>
-        </div>
-        <div class="mb-3 position-relative">
-            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-            <input type="password" class="form-control" placeholder="Konfirmasi Password" name="password_confirmation" required>
-        </div>
-        <div class="form-check mb-3">
+          </div>
+          <div class="mb-3 text-end">
+            <a href="#" class="text-danger small-link">Lupa Password?</a>
+          </div>
+          <div class="form-check mb-3 text-start">
             <input class="form-check-input" type="checkbox" id="termsCheck" required>
             <label class="form-check-label" for="termsCheck">
-                Dengan mendaftar, saya menyetujui <a href="#">Ketentuan Pengguna</a> & <a href="#">Kebijakan Privasi</a>
+              Dengan login menggunakan nomor atau metode lain, saya setuju dengan
+              <a href="#">Ketentuan Pengguna</a> & <a href="#">Kebijakan Privasi</a>
             </label>
-        </div>
-        <button type="submit" class="btn register-btn w-100">DAFTAR</button>
+          </div>
+          <a href="{{ route('alumni') }}" class="card-role mitra text-decoration-none">
+                <button type="submit" class="btn login-btn w-100">LOGIN</button>
+            </a>
+            <form action="{{ route('loginalumni') }}" method="POST">
     </form>
       </div>
     </div>

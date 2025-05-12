@@ -34,7 +34,7 @@
     }
 
     .navbar .logo {
-      width: 120px;
+      width: 100px;
     }
 
     .user-info {
@@ -242,7 +242,7 @@
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" width=""/>
+    <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" />
     <div class="user-info">
       <span>Halo User</span>
       <img src="{{ url('img/profile.jpg') }}" alt="Profile" class="profile-picture" />
@@ -257,83 +257,68 @@
       <a class="text-secondary" href="#">Sertifikasi</a>
       <a class="text-secondary" href="#">Loker</a>
       <a class="text-secondary" href="#">Pelatihan</a>
-      <a class="text-secondary" href="{{ route('profile_alumni') }}">Profil</a>
-
+      <a class="text-secondary" href="#">Profil</a>
       <a href="#" class="logout">Logout</a>
     </div>
 
-    <!-- Content -->
-    <div class="content">
-      <div class="banner">
-        <div class="col-lg-7 d-flex flex-column justify-content-center text-lg-start text-center py-5 px-4 ml-5">
-        <h2 class="fw-bold">Bangun Masa Depanmu Bersama Skul.Id</h2>
-        <p class="text-secondary">Temukan peluang terbaik seperti pelatihan, sertifikasi, dan informasi kampus untuk membantumu meraih cita-cita karier.</p>
+<!-- Content -->
+<div class="content" id="edit">
+  <div class="container py-5 px-4">
+    <div class="card rounded-4 p-4" style="background-color: #fefefe;">
+      <h3 class="mb-4 fw-bold text-primary text-center">Edit Profil</h3>
+      <form>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Nama Lengkap</label>
+          <input type="text" class="form-control rounded-3" value="Rizky Saputra">
         </div>
-        <img src="{{ url('img/main-dashboard.png') }}" alt="Ilustrasi" class="illustration" />
-      </div>
-
-      <div class="container-fluid my-5">
-        <div id="fitur">
-          <h5 class="mb-4 fw-semibold">Fitur Utama :</h5>
-          <div class="row gx-4 gy-4 mb-4">
-            <div class="col-md-4">
-              <a href="{{ route('sertifikasi') }}">
-                <div class="feature-card sertifikasi h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Sertifikasi</div>
-                    <p>Perkuat kredensialmu dengan sertifikasi profesional.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="{{ route('loker') }}">
-                <div class="feature-card loker h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Loker</div>
-                    <p>Temukan pekerjaan yang sesuai dengan minat dan keahlianmu.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="{{ route('pelatihan') }}">
-                <div class="feature-card pelatihan h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Pelatihan</div>
-                    <p>Ikuti pelatihan untuk meningkatkan kompetensimu.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="row gx-4 gy-4">
-            <div class="col-md-6">
-              <a href="{{ route('ikalumni') }}">
-                <div class="feature-card alumni h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Ikatan Alumni</div>
-                    <p>Bangun koneksi dengan sesama alumni dari sekolahmu.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="col-md-6">
-              <a href="{{ route('kuliah') }}">
-                <div class="feature-card magang h-100">
-                  <div class="feature-content">
-                    <div class="feature-title">Kuliah</div>
-                    <p>Informasi dan panduan kuliah di berbagai universitas Indonesia.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">NISN</label>
+          <input type="text" class="form-control rounded-3" value="1234567890">
         </div>
-      </div>
-
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Kelas</label>
+          <input type="text" class="form-control rounded-3" value="XII IPA 1">
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Jurusan</label>
+          <input type="text" class="form-control rounded-3" value="Teknik Komputer dan Jaringan">
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Asal Sekolah</label>
+          <input type="text" class="form-control rounded-3" value="SMK Negeri 1 Bandung">
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Email</label>
+          <input type="email" class="form-control rounded-3" value="rizky@example.com">
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">No. Telepon</label>
+          <input type="text" class="form-control rounded-3" value="081234567890">
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Jenis Kelamin</label>
+          <select class="form-select rounded-3">
+            <option selected>Laki-laki</option>
+            <option>Perempuan</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-semibold">Tanggal Lahir</label>
+          <input type="date" class="form-control rounded-3" value="2007-05-12">
+        </div>
+        <div class="mb-4">
+          <label class="form-label fw-semibold">Alamat</label>
+          <textarea class="form-control rounded-3" rows="2">Jl. Merdeka No. 10, Bandung</textarea>
+        </div>
+        <div class="text-end">
+          <button type="submit" class="btn btn-success px-4 py-2 rounded-3 fw-semibold">Simpan Perubahan</button>
+        </div>
+      </form>
     </div>
   </div>
+</div>
+
+
 </body>
 </html>
+
