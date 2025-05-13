@@ -6,6 +6,7 @@
   <title>Skul.Id</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> 
   <style>
     /* ============ Base ============ */
     body {
@@ -64,7 +65,7 @@
     .sidebar {
       width: 220px;
       background-color: #eff9ff;
-      padding: 2rem 1rem;
+      padding: 2rem 2rem;
       flex-shrink: 0;
     }
 
@@ -83,6 +84,7 @@
       margin-top: 2rem;
       color: #d24c62;
     }
+
 
     .content {
       flex: 1;
@@ -253,13 +255,14 @@
   <div class="main-wrapper">
     <!-- Sidebar -->
     <div class="sidebar">
-      <a class="text-secondary" href="#">Beranda</a>
-      <a class="text-secondary" href="#">Sertifikasi</a>
-      <a class="text-secondary" href="#">Loker</a>
-      <a class="text-secondary" href="#">Pelatihan</a>
-      <a class="text-secondary" href="#">Profil</a>
-      <a href="#" class="logout">Logout</a>
-    </div>
+  <a class="text-secondary" href="#"><i class="bi bi-house-door-fill me-2"></i>Beranda</a>
+  <a class="text-secondary" href="#"><i class="bi bi-patch-check-fill me-2"></i>Sertifikasi</a>
+  <a class="text-secondary" href="#"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
+  <a class="text-secondary" href="#"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
+  <a class="text-secondary" href="{{ route('profile_alumni') }}"><i class="bi bi-person-fill me-2"></i>Profil</a>
+  <a href="#" class="logout"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+</div>
+
 
     <div class="content">
   <div class="container py-5 px-4">

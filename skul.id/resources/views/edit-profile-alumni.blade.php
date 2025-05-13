@@ -6,6 +6,7 @@
   <title>Skul.Id</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     /* ============ Base ============ */
     body {
@@ -22,6 +23,50 @@
       padding: 0;
       margin: 0;
     }
+
+    /* Layout agar rata kiri dan tidak terlalu sempit */
+.content {
+  padding: 3rem 4rem;
+  background-color: #fff;
+}
+
+/* Hilangkan border dan bayangan dari card */
+.card {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* Form control styling agar clean (tanpa border box terlihat) */
+.form-control,
+.form-select,
+textarea {
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  box-shadow: none;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: #0d6efd;
+  box-shadow: none;
+}
+
+/* Judul agar sejajar kiri */
+.content h3 {
+  text-align: left !important;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+/* Tombol submit sejajar kiri */
+.text-end {
+  text-align: left !important;
+}
+
 
     /* ============ Navbar ============ */
     .navbar {
@@ -237,6 +282,41 @@
         display: none;
       }
     }
+
+    #edit input, textarea, option {
+      width: 60%;
+    }
+
+    #edit textarea{
+      width: 60%;
+    }
+
+    #edit .form-select {
+      width: 60%;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #eff9ff;
+      padding: 2rem 2rem;
+      flex-shrink: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #000;
+      padding: 0.75rem 0;
+      font-weight: 600;
+    }
+
+    .sidebar a:hover {
+      color: #d24c62;
+    }
+
+    .sidebar .logout {
+      margin-top: 2rem;
+      color: #d24c62;
+    }
   </style>
 </head>
 <body>
@@ -253,47 +333,48 @@
   <div class="main-wrapper">
     <!-- Sidebar -->
     <div class="sidebar">
-      <a class="text-secondary" href="#">Beranda</a>
-      <a class="text-secondary" href="#">Sertifikasi</a>
-      <a class="text-secondary" href="#">Loker</a>
-      <a class="text-secondary" href="#">Pelatihan</a>
-      <a class="text-secondary" href="#">Profil</a>
-      <a href="#" class="logout">Logout</a>
-    </div>
+  <a class="text-secondary" href="#"><i class="bi bi-house-door-fill me-2"></i>Beranda</a>
+  <a class="text-secondary" href="#"><i class="bi bi-patch-check-fill me-2"></i>Sertifikasi</a>
+  <a class="text-secondary" href="#"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
+  <a class="text-secondary" href="#"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
+  <a class="text-secondary" href="{{ route('profile_alumni') }}"><i class="bi bi-person-fill me-2"></i>Profil</a>
+  <a href="#" class="logout"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+</div>
+
 
 <!-- Content -->
 <div class="content" id="edit">
-  <div class="container py-5 px-4">
+  <h3 class="mb-4 fw-bold text-primary text-center px-4">Edit Profil</h3>
+  <div class="container py-3 px-4">
     <div class="card rounded-4 p-4" style="background-color: #fefefe;">
-      <h3 class="mb-4 fw-bold text-primary text-center">Edit Profil</h3>
       <form>
         <div class="mb-3">
           <label class="form-label fw-semibold">Nama Lengkap</label>
-          <input type="text" class="form-control rounded-3" value="Rizky Saputra">
+          <input type="text" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">NISN</label>
-          <input type="text" class="form-control rounded-3" value="1234567890">
+          <input type="text" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">Kelas</label>
-          <input type="text" class="form-control rounded-3" value="XII IPA 1">
+          <input type="text" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">Jurusan</label>
-          <input type="text" class="form-control rounded-3" value="Teknik Komputer dan Jaringan">
+          <input type="text" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">Asal Sekolah</label>
-          <input type="text" class="form-control rounded-3" value="SMK Negeri 1 Bandung">
+          <input type="text" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">Email</label>
-          <input type="email" class="form-control rounded-3" value="rizky@example.com">
+          <input type="email" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">No. Telepon</label>
-          <input type="text" class="form-control rounded-3" value="081234567890">
+          <input type="text" class="form-control rounded-3">
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">Jenis Kelamin</label>
@@ -304,11 +385,11 @@
         </div>
         <div class="mb-3">
           <label class="form-label fw-semibold">Tanggal Lahir</label>
-          <input type="date" class="form-control rounded-3" value="2007-05-12">
+          <input type="date" class="form-control rounded-3">
         </div>
         <div class="mb-4">
           <label class="form-label fw-semibold">Alamat</label>
-          <textarea class="form-control rounded-3" rows="2">Jl. Merdeka No. 10, Bandung</textarea>
+          <textarea class="form-control rounded-3" rows="2"></textarea>
         </div>
         <div class="text-end">
           <button type="submit" class="btn btn-success px-4 py-2 rounded-3 fw-semibold">Simpan Perubahan</button>

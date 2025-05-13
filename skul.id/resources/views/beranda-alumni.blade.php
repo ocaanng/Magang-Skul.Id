@@ -6,12 +6,15 @@
   <title>Skul.Id</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
   <style>
     /* ============ Base ============ */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
       background-color: #f8f9fa;
+      overflow-x: hidden;
     }
 
     a {
@@ -61,10 +64,35 @@
       height: calc(100vh - 80px);
     }
 
+    .artikel-card {
+  display: flex;
+  gap: 1rem;
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 100%;
+}
+
+.artikel-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.artikel-card .artikel-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
     .sidebar {
       width: 220px;
       background-color: #eff9ff;
-      padding: 2rem 1rem;
+      padding: 2rem 2rem;
       flex-shrink: 0;
     }
 
@@ -88,6 +116,7 @@
       flex: 1;
       overflow-y: auto;
       background-color: #fff;
+      margin: 0;
     }
 
     /* ============ Banner ============ */
@@ -210,6 +239,10 @@
       color: #8E8E8E;
     }
 
+    .footer {
+      margin-top: 200px;
+    }
+
     /* ============ Responsive ============ */
     @media (max-width: 768px) {
       .main-wrapper {
@@ -237,6 +270,33 @@
         display: none;
       }
     }
+
+    @media (max-width: 1000px) {
+      .main-wrapper {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        display: none;
+      }
+      
+      #fitur {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      .banner-images {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .banner-images img {
+        width: 100%;
+      }
+
+      .banner .illustration {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -249,30 +309,26 @@
     </div>
   </div>
 
-  <!-- Sidebar + Content -->
   <div class="main-wrapper">
-    <!-- Sidebar -->
     <div class="sidebar">
-      <a class="text-secondary" href="#">Beranda</a>
-      <a class="text-secondary" href="#">Sertifikasi</a>
-      <a class="text-secondary" href="#">Loker</a>
-      <a class="text-secondary" href="#">Pelatihan</a>
-      <a class="text-secondary" href="{{ route('profile_alumni') }}">Profil</a>
-
-      <a href="#" class="logout">Logout</a>
+      <a class="text-secondary" href="#"><i class="bi bi-house-door-fill me-2"></i>Beranda</a>
+      <a class="text-secondary" href="#"><i class="bi bi-patch-check-fill me-2"></i>Sertifikasi</a>
+      <a class="text-secondary" href="#"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
+      <a class="text-secondary" href="#"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
+      <a class="text-secondary" href="{{ route('profile_alumni') }}"><i class="bi bi-person-fill me-2"></i>Profil</a>
+      <a href="#" class="logout"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
     </div>
 
-    <!-- Content -->
     <div class="content">
       <div class="banner">
         <div class="col-lg-7 d-flex flex-column justify-content-center text-lg-start text-center py-5 px-4 ml-5">
-        <h2 class="fw-bold">Bangun Masa Depanmu Bersama Skul.Id</h2>
-        <p class="text-secondary">Temukan peluang terbaik seperti pelatihan, sertifikasi, dan informasi kampus untuk membantumu meraih cita-cita karier.</p>
+          <h2 class="fw-bold">Bangun Masa Depanmu Bersama Skul.Id</h2>
+          <p class="text-secondary">Temukan peluang terbaik seperti pelatihan, sertifikasi, dan informasi kampus untuk membantumu meraih cita-cita karier.</p>
         </div>
         <img src="{{ url('img/main-dashboard.png') }}" alt="Ilustrasi" class="illustration" />
       </div>
 
-      <div class="container-fluid my-5">
+      <div class="container-fluid mt-5">
         <div id="fitur">
           <h5 class="mb-4 fw-semibold">Fitur Utama :</h5>
           <div class="row gx-4 gy-4 mb-4">
@@ -330,10 +386,145 @@
               </a>
             </div>
           </div>
+          <h5 class="mb-4 mt-5 fw-semibold">Fitur Add-On :</h5>
+        <div class="row gx-4 gy-4 mb-4 text-center">
+          <div class="col-6 col-md-2">
+            <a href="#" class="text-decoration-none text-dark">
+              <div>
+                <i class="bi bi-file-earmark-text-fill fs-1 text-danger"></i>
+                <div class="mt-2 fw-semibold">Artikel</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a href="#" class="text-decoration-none text-dark">
+              <div>
+                <i class="bi bi-book-half fs-1 text-primary"></i>
+                <div class="mt-2 fw-semibold">E-Book</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a href="#" class="text-decoration-none text-dark">
+              <div>
+                <i class="bi bi-globe-americas fs-1 text-warning"></i>
+                <div class="mt-2 fw-semibold">Jelajah Skul.id</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a href="#" class="text-decoration-none text-dark">
+              <div>
+                <i class="bi bi-wifi fs-1 text-info"></i>
+                <div class="mt-2 fw-semibold">Pulsa & Internet</div>
+              </div>
+            </a>
+          </div>
+          <div class="col-6 col-md-2">
+            <a href="#" class="text-decoration-none text-dark">
+              <div>
+                <i class="bi bi-mortarboard-fill fs-1 text-success"></i>
+                <div class="mt-2 fw-semibold">Beasiswaku</div>
+              </div>
+            </a>
+          </div>
         </div>
+        <!-- Voucher Games Section -->
+        <div class="container-fluid my-5">
+          <h5 class="text-danger fw-semibold py-1 mt-10">
+            <i class="bi bi-controller me-2"></i>VOUCHER GAMES
+          </h5>
+          <p class="text-muted">Upgrade karakter game kamu dengan beli vouchernya!</p>
+          <div class="d-flex flex-wrap gap-4 mt-3 mb-5">
+            <img src="img/mlbb.png" alt="Mobile Legends" class="rounded-circle" width="10%">
+            <img src="img/codm.png" alt="COD Mobile" class="rounded-circle" width="10%">
+            <img src="img/zepeto.png" alt="Zepeto Gold" class="rounded-circle" width="10%">
+            <img src="img/googleplay.png" alt="Google Play" class="rounded-circle" width="10%">
+            <img src="img/aov.png" alt="AOV" class="rounded-circle" width="10%">
+            <img src="img/freefire.png" alt="Free Fire" class="rounded-circle" width="10%">
+          </div>
+
+          <!-- Artikel Section -->
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="text-danger fw-semibold">
+              <i class="bi bi-journal-richtext me-2 py-1 mt-10"></i>ARTIKEL
+            </h5>
+            <a href="#" class="text-danger text-decoration-none fw-semibold">Lihat Semua</a>
+          </div>
+
+          <div class="row g-3 mb-10">
+  <!-- Artikel 1 -->
+  <div class="col-md-6">
+    <div class="artikel-card">
+      <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" alt="Thumbnail">
+      <div class="artikel-content">
+        <div class="fw-semibold mb-1">Code Redeem Roblox: Blox Fruits Mei 2025</div>
+        <div class="text-muted small">Oleh Duniagames</div>
       </div>
+    </div>
+  </div>
+
+  <!-- Artikel 2 -->
+  <div class="col-md-6">
+    <div class="artikel-card">
+      <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" alt="Thumbnail">
+      <div class="artikel-content">
+        <div class="fw-semibold mb-1">PS5 Bakal Memperkenalkan Cara Baru untuk Beli Game Mereka</div>
+        <div class="text-muted small">Oleh Duniagames</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Artikel 3 -->
+  <div class="col-md-6">
+    <div class="artikel-card">
+      <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" alt="Thumbnail">
+      <div class="artikel-content">
+        <div class="fw-semibold mb-1">Rilis Teaser Perdana, Ini Beragam Hal Menarik Godzilla X Kong: Supernova</div>
+        <div class="text-muted small">Oleh Duniagames</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Artikel 4 -->
+  <div class="col-md-6">
+    <div class="artikel-card">
+      <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" alt="Thumbnail">
+      <div class="artikel-content">
+        <div class="fw-semibold mb-1">Alliance Insight: Set Terbaru Yu-Gi-Oh! AE yang Hadirkan Kartu-kartu Lama!</div>
+        <div class="text-muted small">Oleh Duniagames</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Footer -->
+        
+      </div>
+      
+    </div>
+    <footer class="footer bg-light py-4">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-md-5 mb-3">
+        <h5 class="text-primary fw-bold">Skul.Id</h5>
+        <p class="text-muted mb-0">Skul.Id adalah platform yang menghubungkan alumni dengan sekolah, dunia industri, dan peluang karier.</p>
+      </div>
+      <div class="col-md-3 ms-auto text-start mb-3">
+        <h5 class="fw-bold">Kontak</h5>
+        <p class="mb-0 text-muted">Email: info@skul.id</p>
+        <p class="mb-0 text-muted">Telp/WA: +62 852-2584-5253</p>
+      </div>
+    </div>
+    <div class="text-center text-muted small mt-4">
+      © 2025 Skul.Id. All rights reserved.
+    </div>
+  </div>
+</footer>
+
 
     </div>
   </div>
+
 </body>
 </html>
