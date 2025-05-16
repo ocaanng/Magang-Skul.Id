@@ -111,7 +111,7 @@
         </div>
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-            <input type="email" class="form-control" placeholder="Email" name="email" required>
+            <input type="text" class="form-control" placeholder="nomor" name="nomor" required>
         </div>
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-lock"></i></span>

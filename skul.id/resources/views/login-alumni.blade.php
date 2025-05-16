@@ -181,7 +181,7 @@
               <a href="#">Ketentuan Pengguna</a> & <a href="#">Kebijakan Privasi</a>
             </label>
           </div>
-          <a href="{{ route('alumni') }}" class="card-role mitra text-decoration-none">
+          <a href="{{ route('beranda_alumni') }}" class="card-role mitra text-decoration-none">
                 <button type="submit" class="btn login-btn w-100">LOGIN</button>
             </a>
             <form action="{{ route('loginalumni') }}" method="POST">

@@ -212,106 +212,148 @@
       <h3 class="mb-4 fw-bold text-primary px-2">Edit Profil</h3>
       <div class="container py-3">
         <div class="card rounded-4 p-4" style="background-color: #fefefe;">
-          <form>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Nama Lengkap</label>
-              <input type="text" class="form-control rounded-3" placeholder="Contoh: Rizky Ramadhan">
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">NISN</label>
-              <input type="text" class="form-control rounded-3" placeholder="Contoh: 0044556677">
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Provinsi</label>
-              <select class="form-select rounded-3" id="provinsi">
-                <option selected disabled>Pilih Provinsi</option>
-                <option value="sulawesi_utara">Sulawesi Utara</option>
-                <option value="sulawesi_selatan">Sulawesi Selatan</option>
-                <option value="sulawesi_tengah">Sulawesi Tengah</option>
-                <option value="sulawesi_tenggara">Sulawesi Tenggara</option>
-                <option value="gorontalo">Gorontalo</option>
-                <option value="sulawesi_barat">Sulawesi Barat</option>
-              </select>
-            </div>
+        <div class="container py-4">
+      <form>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Nama Lengkap</label>
+            <input type="text" class="form-control rounded-4 shadow-sm" placeholder="Contoh: Rizky Ramadhan">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">NISN</label>
+            <input type="text" class="form-control rounded-4 shadow-sm" placeholder="Contoh: 0044556677">
+          </div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Kota/Kabupaten</label>
-              <select class="form-select rounded-3" id="kota">
-                <option selected disabled>Pilih Kota</option>
-              </select>
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Provinsi</label>
+            <select class="form-select rounded-4 shadow-sm" id="provinsi">
+              <option selected disabled>Pilih Provinsi</option>
+              <option value="sulawesi_utara">Sulawesi Utara</option>
+              <option value="sulawesi_selatan">Sulawesi Selatan</option>
+              <option value="sulawesi_tengah">Sulawesi Tengah</option>
+              <option value="sulawesi_tenggara">Sulawesi Tenggara</option>
+              <option value="gorontalo">Gorontalo</option>
+              <option value="sulawesi_barat">Sulawesi Barat</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Kota/Kabupaten</label>
+            <select class="form-select rounded-4 shadow-sm" id="kota">
+              <option selected disabled>Pilih Kota</option>
+            </select>
+          </div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">NPSN Sekolah</label>
-              <input type="text" class="form-control rounded-3" id="npsn" placeholder="Contoh: 700001">
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">NPSN Sekolah</label>
+            <input type="text" class="form-control rounded-4 shadow-sm" id="npsn" placeholder="Contoh: 700001">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Asal Sekolah</label>
+            <select class="form-select rounded-4 shadow-sm" id="sekolah">
+              <option selected disabled>Pilih Sekolah</option>
+            </select>
+          </div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Asal Sekolah</label>
-              <select class="form-select rounded-3" id="sekolah">
-                <option selected disabled>Pilih Sekolah</option>
-              </select>
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Kelas</label>
+            <select class="form-select rounded-4 shadow-sm" id="kelas">
+              <option selected disabled>Pilih Kelas</option>
+              <option>X</option>
+              <option>XI</option>
+              <option>XII</option>
+              <option>Alumni</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+  <label class="form-label fw-semibold">Tahun Keluar</label>
+  <input type="number" class="form-control rounded-4 shadow-sm" placeholder="Contoh: 2023" min="2000" max="2099">
+</div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Kelas</label>
-              <select class="form-select rounded-3">
-                <option selected disabled>Pilih Kelas</option>
-                <option>X</option>
-                <option>XI</option>
-                <option>XII</option>
-                <option>Alumni</option>
-              </select>
-            </div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Jurusan</label>
-              <select class="form-select rounded-3">
-                <option selected disabled>Pilih Jurusan</option>
-                <option>Rekayasa Perangkat Lunak</option>
-                <option>Teknik Komputer dan Jaringan</option>
-                <option>Multimedia</option>
-                <option>Akuntansi</option>
-                <option>Administrasi Perkantoran</option>
-                <option>Lainnya</option>
-              </select>
-            </div>
-            
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Email</label>
-              <input type="email" class="form-control rounded-3" placeholder="Contoh: rizky@email.com">
-            </div>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">No. Telepon</label>
-              <input type="text" class="form-control rounded-3" placeholder="08xx xxxx xxxx (Telkomsel saja)">
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Jurusan</label>
+            <select class="form-select rounded-4 shadow-sm">
+              <option selected disabled>Pilih Jurusan</option>
+              <option>Rekayasa Perangkat Lunak</option>
+              <option>Teknik Komputer dan Jaringan</option>
+              <option>Multimedia</option>
+              <option>Akuntansi</option>
+              <option>Administrasi Perkantoran</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Jenis Kelamin</label>
-              <select class="form-select rounded-3">
-                <option selected disabled>Pilih Jenis Kelamin</option>
-                <option>Laki-laki</option>
-                <option>Perempuan</option>
-              </select>
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="email" class="form-control rounded-4 shadow-sm" placeholder="Contoh: rizky@email.com">
+          </div>
 
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Tanggal Lahir</label>
-              <input type="date" class="form-control rounded-3">
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">No. Telepon</label>
+            <input type="text" class="form-control rounded-4 shadow-sm" placeholder="08xx xxxx xxxx (Telkomsel saja)">
+          </div>
 
-            <div class="mb-4">
-              <label class="form-label fw-semibold">Alamat</label>
-              <textarea class="form-control rounded-3" rows="2" placeholder="Tulis alamat lengkap di sini..."></textarea>
-            </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Jenis Kelamin</label>
+            <select class="form-select rounded-4 shadow-sm">
+              <option selected disabled>Pilih Jenis Kelamin</option>
+              <option>Laki-laki</option>
+              <option>Perempuan</option>
+            </select>
+          </div>
 
-            <div class="text-start">
-              <button type="submit" class="btn btn-success px-4 py-2 rounded-3 fw-semibold">Simpan Perubahan</button>
-            </div>
-          </form>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Tanggal Lahir</label>
+            <input type="date" class="form-control rounded-4 shadow-sm">
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Status Saat Ini</label>
+            <select class="form-select rounded-4 shadow-sm">
+              <option selected disabled>Pilih Status</option>
+              <option>Bekerja</option>
+              <option>Wirausaha</option>
+              <option>Kuliah</option>
+              <option>Tidak Bekerja</option>
+            </select>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Bidang Pekerjaan</label>
+            <input type="text" class="form-control rounded-4 shadow-sm" placeholder="Contoh: Teknologi Informasi">
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-semibold">Sertifikasi Terakhir yang Diikuti</label>
+            <input type="text" class="form-control rounded-4 shadow-sm" placeholder="Contoh: Junior Web Developer">
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-semibold">Apakah Sertifikasi Sesuai dengan Pekerjaan?</label>
+            <select class="form-select rounded-4 shadow-sm">
+              <option selected disabled>Pilih Jawaban</option>
+              <option>Ya, sesuai</option>
+              <option>Tidak sesuai</option>
+              <option>Tidak relevan / Belum bekerja</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label class="form-label fw-semibold">Alamat</label>
+            <textarea class="form-control rounded-4 shadow-sm" rows="2" placeholder="Tulis alamat lengkap..."></textarea>
+          </div>
+
+          <div class="col-12 text-center mt-4">
+            <button type="submit" class="btn btn-success px-5 py-2 rounded-4 fw-semibold shadow-sm">Simpan Perubahan</button>
+          </div>
         </div>
-      </div>
-    </div> 
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {

@@ -311,10 +311,10 @@
 
   <div class="main-wrapper">
     <div class="sidebar">
-      <a class="text-secondary" href="#"><i class="bi bi-house-door-fill me-2"></i>Beranda</a>
-      <a class="text-secondary" href="#"><i class="bi bi-patch-check-fill me-2"></i>Sertifikasi</a>
-      <a class="text-secondary" href="#"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
-      <a class="text-secondary" href="#"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
+      <a class="text-secondary" href="{{ route('beranda_alumni') }}"><i class="bi bi-house-door-fill me-2"></i>Beranda</a>
+      <a class="text-secondary" href="{{ route('sertifikasi_alumni') }}"><i class="bi bi-patch-check-fill me-2"></i>Sertifikasi</a>
+      <a class="text-secondary" href="{{ route('loker_alumni') }}"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
+      <a class="text-secondary" href="{{ route('pelatihan_alumni') }}"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
       <a class="text-secondary" href="{{ route('profile_alumni') }}"><i class="bi bi-person-fill me-2"></i>Profil</a>
       <a href="#" class="logout"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
     </div>
@@ -333,7 +333,7 @@
           <h5 class="mb-4 fw-semibold">Fitur Utama :</h5>
           <div class="row gx-4 gy-4 mb-4">
             <div class="col-md-4">
-              <a href="{{ route('sertifikasi') }}">
+              <a href="{{ route('sertifikasi_alumni') }}">
                 <div class="feature-card sertifikasi h-100">
                   <div class="feature-content">
                     <div class="feature-title">Sertifikasi</div>
@@ -343,7 +343,7 @@
               </a>
             </div>
             <div class="col-md-4">
-              <a href="{{ route('loker') }}">
+              <a href="{{ route('loker_alumni') }}">
                 <div class="feature-card loker h-100">
                   <div class="feature-content">
                     <div class="feature-title">Loker</div>
@@ -353,7 +353,7 @@
               </a>
             </div>
             <div class="col-md-4">
-              <a href="{{ route('pelatihan') }}">
+              <a href="{{ route('pelatihan_alumni') }}">
                 <div class="feature-card pelatihan h-100">
                   <div class="feature-content">
                     <div class="feature-title">Pelatihan</div>
@@ -389,7 +389,7 @@
           <h5 class="mb-4 mt-5 fw-semibold">Fitur Add-On :</h5>
         <div class="row gx-4 gy-4 mb-4 text-center">
           <div class="col-6 col-md-2">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="{{ route('artikel_alumni') }}" class="text-decoration-none text-dark">
               <div>
                 <i class="bi bi-file-earmark-text-fill fs-1 text-danger"></i>
                 <div class="mt-2 fw-semibold">Artikel</div>
@@ -397,7 +397,7 @@
             </a>
           </div>
           <div class="col-6 col-md-2">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="{{ route('ebook_alumni') }}" class="text-decoration-none text-dark">
               <div>
                 <i class="bi bi-book-half fs-1 text-primary"></i>
                 <div class="mt-2 fw-semibold">E-Book</div>
@@ -405,7 +405,7 @@
             </a>
           </div>
           <div class="col-6 col-md-2">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="{{ route('jelajah_alumni') }}" class="text-decoration-none text-dark">
               <div>
                 <i class="bi bi-globe-americas fs-1 text-warning"></i>
                 <div class="mt-2 fw-semibold">Jelajah Skul.id</div>
@@ -413,7 +413,7 @@
             </a>
           </div>
           <div class="col-6 col-md-2">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="https://www.telkomsel.com/shops/digital-product/package?utm_source=wec&utm_medium=skulbanner&utm_campaign=EPskul&utm_id=EPskul&embed=on&msisdn=&type=Kamu%20Banget&category=&roaming=&service=&sort=lowest-price&minPrice=&maxPrice=&quota=" class="text-decoration-none text-dark" target="_blank">
               <div>
                 <i class="bi bi-wifi fs-1 text-info"></i>
                 <div class="mt-2 fw-semibold">Pulsa & Internet</div>
@@ -421,7 +421,7 @@
             </a>
           </div>
           <div class="col-6 col-md-2">
-            <a href="#" class="text-decoration-none text-dark">
+            <a href="https://account.schoters.com/en/login?redirect_url=https%3A%2F%2Facademy.schoters.com%2Fdemo%2Fclaim%3Fcode%3Dschotersskulid&client_id=schoters&view=login" class="text-decoration-none text-dark" target="_blank">
               <div>
                 <i class="bi bi-mortarboard-fill fs-1 text-success"></i>
                 <div class="mt-2 fw-semibold">Beasiswaku</div>
@@ -429,27 +429,41 @@
             </a>
           </div>
         </div>
-        <!-- Voucher Games Section -->
-        <div class="container-fluid my-5">
-          <h5 class="text-danger fw-semibold py-1 mt-10">
-            <i class="bi bi-controller me-2"></i>VOUCHER GAMES
-          </h5>
-          <p class="text-muted">Upgrade karakter game kamu dengan beli vouchernya!</p>
-          <div class="d-flex flex-wrap gap-4 mt-3 mb-5">
-            <img src="img/mlbb.png" alt="Mobile Legends" class="rounded-circle" width="10%">
-            <img src="img/codm.png" alt="COD Mobile" class="rounded-circle" width="10%">
-            <img src="img/zepeto.png" alt="Zepeto Gold" class="rounded-circle" width="10%">
-            <img src="img/googleplay.png" alt="Google Play" class="rounded-circle" width="10%">
-            <img src="img/aov.png" alt="AOV" class="rounded-circle" width="10%">
-            <img src="img/freefire.png" alt="Free Fire" class="rounded-circle" width="10%">
-          </div>
+<!-- Voucher Games Section -->
+<div class="container-fluid my-5">
+  <h5 class="text-danger fw-semibold py-1 mt-10">
+    <i class="bi bi-controller me-2"></i>VOUCHER GAMES
+  </h5>
+  <p class="text-muted">Upgrade karakter game kamu dengan beli vouchernya!</p>
+  <div class="d-flex flex-wrap align-items-center gap-4 mt-3 mb-5">
+    <a href="https://duniagames.co.id/top-up/item/mobile-legends" target="_blank">
+      <img src="img/mlbb.png" alt="Mobile Legends" class="rounded-circle" style="width: 80px; height: 80px;">
+    </a>
+    <a href="https://duniagames.co.id/top-up/item/call-of-duty-mobile" target="_blank">
+      <img src="img/codm.png" alt="COD Mobile" class="rounded-circle" style="width: 80px; height: 80px;">
+    </a>
+    <a href="https://duniagames.co.id/top-up/item/razer-gold" target="_blank">
+      <img src="img/zepeto.png" alt="Zepeto Gold" class="rounded-circle" style="width: 80px; height: 80px;">
+    </a>
+    <a href="https://duniagames.co.id/top-up/item/google-play" target="_blank">
+      <img src="img/googleplay.png" alt="Google Play" class="rounded-circle" style="width: 80px; height: 80px;">
+    </a>
+    <a href="https://duniagames.co.id/top-up/item/aov" target="_blank">
+      <img src="img/aov.png" alt="AOV" class="rounded-circle" style="width: 80px; height: 80px;">
+    </a>
+    <a href="https://duniagames.co.id/top-up/item/freefire" target="_blank">
+      <img src="img/freefire.png" alt="Free Fire" class="rounded-circle" style="width: 80px; height: 80px;">
+    </a>
+  </div>
+</div>
+
 
           <!-- Artikel Section -->
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h5 class="text-danger fw-semibold">
               <i class="bi bi-journal-richtext me-2 py-1 mt-10"></i>ARTIKEL
             </h5>
-            <a href="#" class="text-danger text-decoration-none fw-semibold">Lihat Semua</a>
+            <a href="{{ route('artikel_alumni') }}" class="text-danger text-decoration-none fw-semibold">Lihat Semua</a>
           </div>
 
           <div class="row g-3 mb-10">

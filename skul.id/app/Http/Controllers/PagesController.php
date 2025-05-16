@@ -56,6 +56,21 @@ class PagesController extends Controller
             return view('kuliah-alumni');
         }
 
+    public function artikel_alumni()
+        {
+            return view('artikel-alumni');
+        }
+
+    public function ebook_alumni()
+        {
+            return view('ebook-alumni');
+        }
+
+    public function jelajah_alumni()
+        {
+            return view('jelajah-alumni');
+        }
+
     public function login_mitra()
         {
             return view('login-mitra');

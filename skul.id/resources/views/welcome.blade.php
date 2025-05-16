@@ -205,6 +205,52 @@
       </div>
     </div>
     </div>
+
+    <!-- Aplikasi Section -->
+<div class="container my-5">
+  <div class="row align-items-center">
+    
+    <!-- Gambar -->
+    <div class="col-md-4 mb-4 mb-md-0">
+      <img src="{{ url('img/icon-kanan.png') }}" alt="Ilustrasi Aplikasi" class="img-fluid" style="max-width: 90%;">
+    </div>
+
+    <!-- Kontainer Teks dengan Background -->
+    <div class="col-md-8">
+      <div class="p-4 rounded-4" style="background-color: #f6faff;">
+        <h2 class="fw-bold mb-3">Kamu adalah siswa, alumni, atau mitra?</h2>
+        <p class="mb-4 text-secondary" style="font-size: 1.1rem;">
+          Kamu dapat melihat sertifikasi, lowongan perkerjaan hingga pelatihan, dan fitur-fitur lainnya melalui aplikasi Skul.id
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row align-items-center">
+    
+      <div class="col-md-8">
+        <div class="p-4 rounded-4" style="background-color: #f6faff;">
+          <h2 class="fw-bold mb-3">Perusahaan kamu sudah terdaftar?</h2>
+          <p class="mb-4 text-secondary" style="font-size: 1.1rem;">
+            Kamu dapat melihat sertifikasi, lowongan perkerjaan hingga pelatihan, dan fitur-fitur lainnya melalui aplikasi Skul.id
+          </p>
+        </div>
+      </div>
+      <!-- Gambar -->
+    <div class="col-md-4 mb-4 mb-md-0">
+      <img src="{{ url('img/icon-kiri.png') }}" alt="Ilustrasi Aplikasi" class="img-fluid" style="max-width: 110%;">
+    </div>
+
+    <!-- Kontainer Teks dengan Background -->
+
+  </div>
+</div>
+
+
+
  <!-- Footer -->
 <footer class="footer mt-5 pt-4 border-top">
   <div class="container py-3">
