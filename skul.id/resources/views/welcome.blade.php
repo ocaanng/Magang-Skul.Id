@@ -144,6 +144,7 @@
     <div class="body-utama">
         <header>
             <img src="{{ url('img/logo.png') }}" alt="Logo Skul.Id">
+            <img src="{{ url('img/pu.jpg') }}" alt="Logo Skul.Id" class="mx-2">
         </header>
 
         <div class="hero-section d-flex align-items-stretch p-0">
