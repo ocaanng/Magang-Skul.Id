@@ -103,15 +103,13 @@
         <p>Sudah memiliki akun? <a href="{{ url('/login') }}" class="text-danger">Masuk di sini</a></p>
     </div>
 
-    <form method="POST" action="#">
-        @csrf
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-person"></i></span>
             <input type="text" class="form-control" placeholder="Nama Lengkap" name="name" required>
         </div>
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-            <input type="text" class="form-control" placeholder="08xx xxxx xxxx (Telkomsel saja)" name="nomor" required>
+            <input type="text" class="form-control" placeholder="08xx xxxx xxxx (Telkomsel saja)" name="nomor" id="numb"required>
         </div>
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-lock"></i></span>
@@ -128,12 +126,11 @@
             </label>
         </div>
         <button type="submit" class="btn register-btn w-100">DAFTAR</button>
-    </form>
 </div>
 
 <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const form = document.querySelector("form");
+        const form = document.querySelector("numb");
         const phoneInput = form.querySelector('input[type="text"][placeholder*="Telkomsel"]');
 
         form.addEventListener("submit", function (e) {
