@@ -165,7 +165,7 @@
           @csrf
           <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-person"></i></span>
-            <input type="text" class="form-control" placeholder="Username" name="email" required>
+            <input type="text" class="form-control" placeholder="Nomor Handphone" name="email" required>
           </div>
           <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-lock"></i></span>
