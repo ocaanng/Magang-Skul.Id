@@ -111,7 +111,7 @@
         </div>
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-            <input type="text" class="form-control" placeholder="nomor" name="nomor" required>
+            <input type="text" class="form-control" placeholder="08xx xxxx xxxx (Telkomsel saja)" name="nomor" required>
         </div>
         <div class="mb-3 position-relative">
             <span class="input-group-text"><i class="bi bi-lock"></i></span>
@@ -131,5 +131,21 @@
     </form>
 </div>
 
+<script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const phoneInput = form.querySelector('input[type="text"][placeholder*="Telkomsel"]');
+
+        form.addEventListener("submit", function (e) {
+          const phone = phoneInput.value.trim();
+          const telkomselPrefixes = /^(0811|0812|0813|0821|0822|0823|0851|0852|0853)/;
+
+          if (!telkomselPrefixes.test(phone)) {
+            e.preventDefault();
+            alert("Nomor telepon harus nomor Telkomsel (misal: 0812xxxxxxx).");
+            phoneInput.focus();
+          }
+        });
+</script>
 </body>
 </html>
