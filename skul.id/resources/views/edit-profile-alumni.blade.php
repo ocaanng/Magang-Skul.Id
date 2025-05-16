@@ -279,6 +279,7 @@
               <option>Multimedia</option>
               <option>Akuntansi</option>
               <option>Administrasi Perkantoran</option>
+              <option>Teknik Konstruksi</option>
               <option>Lainnya</option>
             </select>
           </div>
