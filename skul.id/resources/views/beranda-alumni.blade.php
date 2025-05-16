@@ -305,7 +305,9 @@
     <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" width=""/>
     <div class="user-info">
       <span>Halo User</span>
+      <a href="{{ route('profile_alumni') }}">
       <img src="{{ url('img/profile.jpg') }}" alt="Profile" class="profile-picture" />
+  </a>
     </div>
   </div>
 
