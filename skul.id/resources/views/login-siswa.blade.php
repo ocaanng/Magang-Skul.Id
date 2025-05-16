@@ -147,7 +147,7 @@
 
     <!-- Logo Skul.id -->
     <img src="{{ url('img/logo.png') }}" alt="Logo Skul.id" class="logo-skulid" />
-
+    <img src="{{ url('img/pu.jpg') }}" alt="Logo Skul.id" class="logo-skulid" />
     <div class="inner-content">
 
       <!-- Icon besar -->

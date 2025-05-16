@@ -253,9 +253,7 @@
         display: none;
       }
 
-      .content {
-        padding: 1rem;
-      }
+
 
       .banner-images {
         flex-direction: column;
@@ -296,20 +294,49 @@
       .banner .illustration {
         display: none;
       }
+
+      .user-info {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" width=""/>
+    <div class="col-lg-6 d-flex gap-4">
+      <div class="col-lg-2">
+
+        <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" width=""/>
+      </div>
+      <div class="col-lg-2">
+        <img src="{{ url('img/pu.png') }}" alt="Logo" class="logo" width=""/>
+      </div>
+    </div>
     <div class="user-info">
       <span>Halo User</span>
-      <a href="{{ route('profile_alumni') }}">
       <img src="{{ url('img/profile.jpg') }}" alt="Profile" class="profile-picture" />
-  </a>
     </div>
+    <button class="btn d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar">
+  <i class="bi bi-list fs-3"></i>
+</button>
   </div>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a class="d-block mb-2 text-dark fw-semibold" href="{{ route('beranda_alumni') }}"><i class="bi bi-house-door-fill me-2"></i>Beranda</a>
+    <a class="d-block mb-2 text-dark fw-semibold" href="{{ route('sertifikasi_alumni') }}"><i class="bi bi-patch-check-fill me-2"></i>Sertifikasi</a>
+    <a class="d-block mb-2 text-dark fw-semibold" href="{{ route('loker_alumni') }}"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
+    <a class="d-block mb-2 text-dark fw-semibold" href="{{ route('pelatihan_alumni') }}"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
+    <a class="d-block mb-2 text-dark fw-semibold" href="{{ route('profile_alumni') }}"><i class="bi bi-person-fill me-2"></i>Profil</a>
+    <a class="d-block mt-3 text-danger fw-semibold" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
+  </div>
+</div>
+
 
   <div class="main-wrapper">
     <div class="sidebar">
@@ -541,6 +568,9 @@
 
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>

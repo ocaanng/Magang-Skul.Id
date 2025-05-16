@@ -37,7 +37,6 @@
     }
 
     .logo-skulid {
-      position: absolute;
       top: 15px;
       left: 20px;
       height: 40px;
@@ -133,6 +132,17 @@
         margin-bottom: 20px;
       }
     }
+
+    .logo-wrapper img {
+  height: 40px;
+}
+
+.logo-skulid,
+.logo-pu {
+  height: 40px;
+  object-fit: contain;
+}
+
   </style>
 </head>
 <body>
@@ -145,15 +155,21 @@
   <!-- Kontainer Utama -->
   <div class="container-box">
 
-    <!-- Logo Skul.id -->
-    <img src="{{ url('img/logo.png') }}" alt="Logo Skul.id" class="logo-skulid" />
+<!-- Logo Skul.id dan PU -->
+<div class="logo-wrapper d-flex align-items-center justify-content-start gap-2 mb-4">
+  <img src="{{ url('img/logo.png') }}" alt="Logo Skul.id" class="logo-skulid" />
+  <img src="{{ url('img/pu.png') }}" alt="Logo PU" class="logo-pu" />
+</div>
+
+
 
     <div class="inner-content">
 
       <!-- Icon besar -->
-      <div class="icon-besar">
-        <img src="{{ url('img/login-alumni.png') }}" alt="Icon Besar" style="width: 350px;">
-      </div>
+      <div class="icon-besar d-flex align-items-center gap-3">
+  <img src="{{ url('img/login-alumni.png') }}" alt="Icon Besar" style="width: 350px;">
+</div>
+
 
       <!-- Form Login -->
       <div class="login-form">
