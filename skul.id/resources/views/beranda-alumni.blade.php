@@ -306,7 +306,6 @@
   <div class="navbar">
     <div class="col-lg-6 d-flex gap-4">
       <div class="col-lg-2">
-
         <img src="{{ url('img/logo.png') }}" alt="Logo" class="logo" width=""/>
       </div>
       <div class="col-lg-2">

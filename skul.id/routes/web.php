@@ -39,5 +39,6 @@ Route::get('/mitra', [PagesController::class, 'mitra'])->name('mitra');
 Route::get('/mitra/sertifikasi', [PagesController::class, 'sertifikasi_mitra'])->name('sertifikasi_mitra');
 Route::get('/mitra/loker', [PagesController::class, 'loker_mitra'])->name('loker_mitra');
 Route::get('/mitra/pelatihan', [PagesController::class, 'pelatihan_mitra'])->name('pelatihan_mitra');
+Route::get('/mitra/data/user', [PagesController::class, 'data_user_mitra'])->name('data_user_mitra');
 
 Route::get('/siswa/login', [PagesController::class, 'login_siswa'])->name('loginsiswa');

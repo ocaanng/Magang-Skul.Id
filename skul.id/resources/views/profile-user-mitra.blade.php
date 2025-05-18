@@ -36,6 +36,56 @@
       align-items: center;
     }
 
+    .main-content {
+      padding: 3rem 10%;
+    }
+
+    .right-section {
+      background-color: white;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .training-item {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .training-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      margin-top: 1.5rem;
+    }
+
+    .training-list .item {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .training-list .item:last-child {
+      border-bottom: none;
+    }
+
+    .training-list .item h6 {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .training-list .item p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    #konten {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
     .navbar .logo {
       width: 120px;
     }
@@ -345,6 +395,25 @@
         display: none;
       }
     }
+
+    .card {
+      border-radius: 1rem;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+    thead th {
+      background-color: #0d6efd;
+      color: white;
+      vertical-align: middle;
+    }
+    tbody tr:hover {
+      background-color: #f0f8ff;
+    }
+    table {
+      white-space: nowrap;
+    }
+    h2 {
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -375,80 +444,109 @@
         </div>
         <img src="{{ url('img/main-dashboard.png') }}" alt="Ilustrasi" class="illustration" />
       </div>
+      <div class="container py-5">
+  <div class="card p-4">
+    <h2 class="mb-4 text-center">Data Pengguna</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered align-middle table-striped">
+        <thead class="text-center">
+          <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Nama Lengkap</th>
+            <th>NISN</th>
+            <th>Kelas</th>
+            <th>Tahun Kelulusan</th>
+            <th>Jurusan</th>
+            <th>Asal Sekolah</th>
+            <th>Jenis Kelamin</th>
+            <th>Tanggal Lahir</th>
+            <th>NPSN</th>
+            <th>Provinsi</th>
+            <th>Kota</th>
+            <th>Alamat</th>
+            <th>Status</th>
+            <th>Status Saat Ini</th>
+            <th>Bidang Pekerjaan</th>
+            <th>Sertifikasi Terakhir</th>
+            <th>Kesesuaian Sertifikasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          @php
+          $users = [
+            [
+              'id' => 1,
+              'user_id' => 'USR001',
+              'nama_lengkap' => 'Budi Santoso',
+              'nisn' => '1234567890',
+              'kelas' => 'XII IPA 1',
+              'tahun_kelulusan' => '2023',
+              'jurusan' => 'IPA',
+              'asal_sekolah' => 'SMA Negeri 1 Jakarta',
+              'jenis_kelamin' => 'Laki-laki',
+              'tanggal_lahir' => '2005-03-12',
+              'npsn' => '20109283',
+              'provinsi' => 'DKI Jakarta',
+              'kota' => 'Jakarta Pusat',
+              'alamat' => 'Jl. Merdeka No.10',
+              'status' => 'Lulus',
+              'status_saat_ini' => 'Kuliah',
+              'bidang_pekerjaan' => '-',
+              'sertifikasi_terakhir' => 'Belum Ada',
+              'kesesuaian_sertifikasi' => 'Tidak Sesuai'
+            ],
+            [
+              'id' => 2,
+              'user_id' => 'USR002',
+              'nama_lengkap' => 'Siti Aminah',
+              'nisn' => '0987654321',
+              'kelas' => 'XII IPS 2',
+              'tahun_kelulusan' => '2022',
+              'jurusan' => 'IPS',
+              'asal_sekolah' => 'SMA Negeri 2 Bandung',
+              'jenis_kelamin' => 'Perempuan',
+              'tanggal_lahir' => '2004-08-20',
+              'npsn' => '20293920',
+              'provinsi' => 'Jawa Barat',
+              'kota' => 'Bandung',
+              'alamat' => 'Jl. Cihampelas No.88',
+              'status' => 'Lulus',
+              'status_saat_ini' => 'Bekerja',
+              'bidang_pekerjaan' => 'Marketing',
+              'sertifikasi_terakhir' => 'Digital Marketing Dasar',
+              'kesesuaian_sertifikasi' => 'Sesuai'
+            ]
+          ];
+          @endphp
 
-      <div class="main-content px-5 py-3">
-    <div class="row">
-
-
-    <!-- Sertifikasi Card Dummy -->
-    <div class="main-content px-5 py-3">
-  <div class="row g-4">
-    <!-- Daftar Sertifikasi -->
-    <div class="col-lg-9">
-      <h5 class="fw-bold text-primary mb-3">Daftar Sertifikasi Tersedia</h5>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-        <!-- Sertifikasi Card Dummy -->
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" class="card-img-top" alt="Sertifikasi Excel">
-            <div class="card-body">
-              <h6 class="card-title fw-bold">Sertifikasi Microsoft Excel</h6>
-              <p class="card-text">Pelatihan Excel tingkat lanjut untuk meningkatkan efisiensi kerja.</p>
-              <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>12 Juni 2025 - 15 Juni 2025</p>
-              <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>SMK Negeri 1 Bandung</p>
-              <p class="mb-2 text-success fw-semibold"><i class="bi bi-cash-coin me-2"></i>Rp 150.000</p>
-              <a href="#" class="btn btn-outline-primary w-100">Daftar Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" class="card-img-top" alt="Sertifikasi UI/UX">
-            <div class="card-body">
-              <h6 class="card-title fw-bold">Sertifikasi UI/UX Design</h6>
-              <p class="card-text">Dasar desain antarmuka pengguna yang menarik dan efektif.</p>
-              <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>20 Juni 2025 - 25 Juni 2025</p>
-              <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Online via Zoom</p>
-              <p class="mb-2 text-success fw-semibold"><i class="bi bi-cash-coin me-2"></i>Gratis</p>
-              <a href="#" class="btn btn-outline-primary w-100">Daftar Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card h-100 shadow-sm">
-            <img src="https://my.skul.id/static/media/img_default_artikel_thumb.03a53a33.svg" class="card-img-top" alt="Sertifikasi Teknisi AC">
-            <div class="card-body">
-              <h6 class="card-title fw-bold">Sertifikasi Teknisi AC</h6>
-              <p class="card-text">Pelatihan profesional tata udara dan pendingin ruangan.</p>
-              <p class="mb-1"><i class="bi bi-calendar-event me-2"></i>1 Juli 2025 - 5 Juli 2025</p>
-              <p class="mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Politeknik Teknik Surabaya</p>
-              <p class="mb-2 text-success fw-semibold"><i class="bi bi-cash-coin me-2"></i>Rp 200.000</p>
-              <a href="#" class="btn btn-outline-primary w-100">Daftar Sekarang</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Right Section -->
-    <div class="col-lg-3">
-      <div class="right-section">
-        <h6>Sertifikasi Terbaru</h6>
-        <div class="sertif-item">Sertifikasi Microsoft Office</div>
-        <div class="sertif-item">Sertifikasi Desain Grafis</div>
-        <div class="sertif-item">Sertifikasi Jaringan Komputer</div>
-        <div class="sertif-item">Sertifikasi Teknik Otomotif</div>
-        <div class="sertif-item">Sertifikasi Arsitektur Gedung</div>
-        <div class="sertif-item">Sertifikasi Mekanik Roda Dua</div>
-      </div>
+          @foreach($users as $user)
+          <tr>
+            <td>{{ $user['id'] }}</td>
+            <td>{{ $user['user_id'] }}</td>
+            <td>{{ $user['nama_lengkap'] }}</td>
+            <td>{{ $user['nisn'] }}</td>
+            <td>{{ $user['kelas'] }}</td>
+            <td>{{ $user['tahun_kelulusan'] }}</td>
+            <td>{{ $user['jurusan'] }}</td>
+            <td>{{ $user['asal_sekolah'] }}</td>
+            <td>{{ $user['jenis_kelamin'] }}</td>
+            <td>{{ $user['tanggal_lahir'] }}</td>
+            <td>{{ $user['npsn'] }}</td>
+            <td>{{ $user['provinsi'] }}</td>
+            <td>{{ $user['kota'] }}</td>
+            <td>{{ $user['alamat'] }}</td>
+            <td>{{ $user['status'] }}</td>
+            <td>{{ $user['status_saat_ini'] }}</td>
+            <td>{{ $user['bidang_pekerjaan'] }}</td>
+            <td>{{ $user['sertifikasi_terakhir'] }}</td>
+            <td>{{ $user['kesesuaian_sertifikasi'] }}</td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
     </div>
   </div>
 </div>
-
 </body>
 </html>
-

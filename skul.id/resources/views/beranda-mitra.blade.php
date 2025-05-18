@@ -229,6 +229,7 @@
       <a class="text-secondary" href="#"><i class="bi bi-briefcase-fill me-2"></i>Loker</a>
       <a class="text-secondary" href="#"><i class="bi bi-journal-text me-2"></i>Pelatihan</a>
       <a class="text-secondary" href="{{ route('profile_alumni') }}"><i class="bi bi-person-fill me-2"></i>Profil</a>
+      <a class="text-secondary" href="{{ route('data_user_mitra') }}"><i class="bi bi-people-fill me-2"></i>Data User</a>
       <a href="#" class="logout"><i class="bi bi-box-arrow-right me-2"></i>Logout</a>
     </div>
 

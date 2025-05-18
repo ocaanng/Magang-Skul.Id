@@ -496,49 +496,45 @@
   </div>
 </div>
 
-<!-- Modal Tambah Lowongan -->
 <div class="modal fade" id="lokerModal" tabindex="-1" aria-labelledby="lokerModalLabel" aria-hidden="true">
+
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <form action="#" method="post">
+      <form action="#" method="post" enctype="multipart/form-data">
         <div class="modal-header">
-          <h5 class="modal-title" id="lokerModalLabel">Form Tambah Lowongan</h5>
+          <h5 class="modal-title" id="sertifikasiModalLabel">Form Tambah Sertifikasi</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
         </div>
         <div class="modal-body">
           <div class="mb-3">
-            <label for="judul" class="form-label">Judul Pekerjaan</label>
+            <label for="judul" class="form-label">Judul Sertifikasi</label>
             <input type="text" class="form-control" id="judul" name="judul" required>
           </div>
           <div class="mb-3">
-            <label for="deskripsi" class="form-label">Deskripsi Pekerjaan</label>
+            <label for="deskripsi" class="form-label">Deskripsi</label>
             <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
-          </div>
-          <div class="mb-3">
-            <label for="lokasi" class="form-label">Lokasi</label>
-            <select class="form-select" id="lokasi" name="lokasi" required>
-              <option value="" disabled selected>Pilih Lokasi</option>
-              <option>Makassar</option>
-              <option>Jakarta</option>
-              <option>Surabaya</option>
-              <option>Bandung</option>
-              <option>Yogyakarta</option>
-            </select>
           </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="tipe" class="form-label">Tipe Pekerjaan</label>
-              <select class="form-select" id="tipe" name="tipe" required>
-                <option value="Full Time">Full Time</option>
-                <option value="Part Time">Part Time</option>
-                <option value="Magang">Magang</option>
-                <option value="Freelance">Freelance</option>
-              </select>
+              <label for="tanggal_mulai" class="form-label">Waktu Mulai</label>
+              <input type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai" required>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="gaji" class="form-label">Estimasi Gaji</label>
-              <input type="text" class="form-control" id="gaji" name="gaji" placeholder="Contoh: Rp3.000.000 - Rp5.000.000">
+              <label for="tanggal_selesai" class="form-label">Waktu Selesai</label>
+              <input type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai" required>
             </div>
+          </div>
+          <div class="mb-3">
+            <label for="tempat" class="form-label">Tempat Penyelenggaraan</label>
+            <input type="text" class="form-control" id="tempat" name="tempat" required>
+          </div>
+          <div class="mb-3">
+            <label for="biaya" class="form-label">Biaya Sertifikasi (Rp)</label>
+            <input type="number" class="form-control" id="biaya" name="biaya" required>
+          </div>
+          <div class="mb-3">
+            <label for="foto" class="form-label">Upload Foto Sertifikasi</label>
+            <input type="file" class="form-control" id="foto" name="foto" accept=".jpg,.jpeg,.png" required>
           </div>
         </div>
         <div class="modal-footer">
@@ -549,5 +545,8 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

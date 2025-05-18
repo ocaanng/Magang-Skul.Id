@@ -100,6 +100,11 @@ class PagesController extends Controller
         {
             return view('pelatihan-mitra');
         }
+
+    public function data_user_mitra()
+        {
+            return view('profile-user-mitra');
+        }
     
     public function login_siswa()
         {

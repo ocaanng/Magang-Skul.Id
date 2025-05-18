@@ -525,38 +525,27 @@
             <label for="deskripsi" class="form-label">Deskripsi</label>
             <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
           </div>
-          <div class="mb-3">
-            <label for="perusahaan" class="form-label">Nama Perusahaan / Mitra</label>
-            <input type="text" class="form-control" id="perusahaan" name="perusahaan" required>
-          </div>
-          <div class="mb-3">
-            <label for="wilayah" class="form-label">Wilayah</label>
-            <select class="form-select" id="wilayah" name="wilayah" required>
-              <option value="" disabled selected>Pilih Wilayah</option>
-              <option>Makassar</option>
-              <option>Jakarta</option>
-              <option>Surabaya</option>
-              <option>Bandung</option>
-              <option>Yogyakarta</option>
-            </select>
-          </div>
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="tanggal_mulai" class="form-label">Tanggal Mulai</label>
+              <label for="tanggal_mulai" class="form-label">Waktu Mulai</label>
               <input type="date" class="form-control" id="tanggal_mulai" name="tanggal_mulai" required>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="tanggal_selesai" class="form-label">Tanggal Selesai</label>
+              <label for="tanggal_selesai" class="form-label">Waktu Selesai</label>
               <input type="date" class="form-control" id="tanggal_selesai" name="tanggal_selesai" required>
             </div>
           </div>
           <div class="mb-3">
-            <label for="lisensi" class="form-label">Nomor Lisensi</label>
-            <input type="text" class="form-control" id="lisensi" name="lisensi" required>
+            <label for="tempat" class="form-label">Tempat Penyelenggaraan</label>
+            <input type="text" class="form-control" id="tempat" name="tempat" required>
           </div>
           <div class="mb-3">
-            <label for="file_sertifikat" class="form-label">Upload Sertifikat (opsional)</label>
-            <input type="file" class="form-control" id="file_sertifikat" name="file_sertifikat" accept=".pdf,.jpg,.png">
+            <label for="biaya" class="form-label">Biaya Sertifikasi (Rp)</label>
+            <input type="number" class="form-control" id="biaya" name="biaya" required>
+          </div>
+          <div class="mb-3">
+            <label for="foto" class="form-label">Upload Foto Sertifikasi</label>
+            <input type="file" class="form-control" id="foto" name="foto" accept=".jpg,.jpeg,.png" required>
           </div>
         </div>
         <div class="modal-footer">
@@ -567,6 +556,9 @@
     </div>
   </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>
